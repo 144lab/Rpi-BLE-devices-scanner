@@ -1,0 +1,13 @@
+[Unit]
+Description = BLE Devices Scanner for Raspberry Pi
+After = influxd.service
+
+[Service]
+WorkingDirectory = /home/pi/Rpi-BLE-devices-scanner
+ExecStart = /home/pi/Rpi-BLE-devices-scanner/start.sh
+Restart = always
+Type = simple
+User = pi
+
+[Install]
+WantedBy = multi-user.target
